@@ -26,6 +26,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Bean//将组件注册在容器中
     public WebMvcConfigurer WebMvcConfiguer(){
         WebMvcConfigurer adapter = new WebMvcConfigurer() {
+            //注册拦截器
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginHanderInterceptor()).addPathPatterns("/**")
