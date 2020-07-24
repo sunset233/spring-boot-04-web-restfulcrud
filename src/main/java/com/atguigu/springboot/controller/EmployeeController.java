@@ -69,7 +69,7 @@ public class EmployeeController {
         employeeDao.save(employee);
         return "redirect:/emps";
     }
-    @PostMapping("/emp/{id}")
+    @PostMapping ("/emp/{id}")
     public String deleteEmployee(@PathVariable("id") Integer id){
         employeeDao.delete(id);
         return "redirect:/emps";
